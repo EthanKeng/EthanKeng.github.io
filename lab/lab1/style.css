@@ -5,6 +5,10 @@
     height:90px;
 }
 
+s{
+    color:'black';
+}
+
 body {
     background-color: lightgrey;
 }
