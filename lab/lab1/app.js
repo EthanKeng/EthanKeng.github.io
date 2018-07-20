@@ -36,6 +36,9 @@ clearButton.addEventListener("click", function(){
 // remove a task from the list
 function removeTask(e){
   // get the parent list item to remove
-  var taskItem = e.target.parentElement;
+//  var taskItem = e.target.parentElement;
+//  taskList.removeChild(taskItem); 
+
+//strike line
   taskList.innerHTML = "<S>"+ taskList.innerHTML+"</S>";
 }
