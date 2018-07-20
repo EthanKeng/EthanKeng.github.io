@@ -40,5 +40,5 @@ function removeTask(e){
 //  taskList.removeChild(taskItem); 
 
 //strike line
-taskItem.innerHTML = "<S>"+ taskItem.innerHTML+"</S>";
+taskItem.innerHTML = "<strike style='color: black'>"+ taskItem.innerHTML+"</strike>";
 }
