@@ -13,6 +13,15 @@ label{
     margin: 10px auto;
 }
 
+#gije{
+    background-color: black;
+    color:red;
+    width: 60%;
+    font-size: 180%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
 form label{
     display: inline;
 }

@@ -45,10 +45,21 @@ function x(){
     var dailyExchangeMsg = document.getElementById("dailyExchangeMsg"); 
     var exchange10Msg = document.getElementById("exchange10Msg");
     var exchange500Msg = document.getElementById('exchange500Msg');
+    var dailyUSD = budget/days
+    var gije = document.getElementById('gije')
+
+    if(dailyUSD < 50){
+        gije.innerHTML = "Are you sure? " +dailyUSD+ "USD per day? </br> You'll be fucked! Eat shit then. "
+    }
+    else if(dailyUSD > 300){
+        gije.innerHTML = "Are you sure? " +dailyUSD+ "USD per day? </br> I can introduce you some 'special PLACES'  ;)  "
+    }
+    
     tripExchangeMsg.innerHTML = "This means you'll need "+ ntd + "NTD for your trip."
     dailyExchangeMsg.innerHTML = "That means you can spend " + ntd/days + 'NTD per day.'
-    exchange10Msg.innerHTML = "You'll need "+ 10*budget + "NTD for an item that would cost you 10USD."
-    exchange500Msg.innerHTML = "You'll need "+ 500*budget + "NTD for an item that would cost you 500USD."
+    exchange10Msg.innerHTML = "You'll need "+ 10*30.59 + "NTD for an item that would cost you 10USD."
+    exchange500Msg.innerHTML = "You'll need "+ 500*30.59 + "NTD for an item that would cost you 500USD."
+    
 }
 
 var images = ["images/Honeymoon-in-Taiwan.jpg", "images/Jiufen-taiwan-travel-photography-jake-and-dannie-26.jpg", "images/keelung-taiwan.jpg", "images/taiwan-mountains-xlarge.jpg" ];
