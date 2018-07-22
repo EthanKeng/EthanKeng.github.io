@@ -10,6 +10,47 @@
 ---------------------------------------------------------------------------------
 */
 
+.img1{
+    background-image: url(certificate/HTML.jpg);
+    width: 70%; 
+    height: 300px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+}
+.img2{
+    background-image: url(certificate/CSS.jpg);
+    width: 70%; 
+    height: 300px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+}
+.img3{
+    background-image: url(certificate/SOLOLEARN.JPG);
+    width: 70%; 
+    height: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+}
+.img4{
+    background-image: url(certificate/edx.JPG);
+    width: 70%; 
+    height: 100px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+}
+
 
 .msg { padding: 10px; background: #222; position: relative; }
 .msg h1 { color: #fff;  }
@@ -39,7 +80,7 @@ p { font-size: 100%; line-height: 18px; padding-right: 3em; }
 a { color: #990003 }
 a:hover { text-decoration: none; }
 strong { font-weight: bold; }
-li { line-height: 24px; border-bottom: 1px solid #ccc; }
+li { line-height: 24px; /* border-bottom: 1px solid #ccc */ ; }
 p.enlarge { font-size: 144%; padding-right: 6.5em; line-height: 24px; }
 p.enlarge span { color: #000 }
 .contact-info { margin-top: 7px; }
@@ -52,8 +93,9 @@ p.enlarge span { color: #000 }
 a#pdf { display: block; float: left; background: #666; color: white; padding: 6px 50px 6px 12px; margin-bottom: 6px; text-decoration: none;  }
 a#pdf:hover { background: #222; }
 
-.job { position: relative; margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
+.job { position: relative; margin-bottom: 1em; padding-bottom: 1em; /*border-bottom: 1px solid #ccc; */}
 .job h4 { position: absolute; top: 0.35em; right: 0 }
+
 .job p { margin: 0.75em 0 3em 0; }
 
 .last { border: none; }
@@ -70,5 +112,5 @@ a#pdf:hover { background: #222; }
 /* --// override to force 1/8th width grids -- */
 .yui-gf .yui-u{width:80.2%;}
 .yui-gf div.first{width:12.3%;}
-.yui-u { position: relative; margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
+.yui-u { position: relative; margin-bottom: 1em;padding-bottom: 1em; border-bottom: 1px solid #ccc; }
 
