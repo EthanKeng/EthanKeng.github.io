@@ -50,6 +50,58 @@
     background-size: 100% 100%;
     margin-right: auto;
 }
+.img5{
+    background-image: url(certificate/TOEIC1.jpg);
+    width: 70%; 
+    height: 250px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+}
+.img6{
+    background-image: url(certificate/N1cut.JPG);
+    width: 70%; 
+    height: 320px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-top:10px;
+}
+.img7{
+    background-image: url(certificate/Takken1.JPG);
+    width: 70%; 
+    height: 550px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-top:15px;
+}
+.img8{
+    background-image: url(certificate/Business\ writing.JPG);
+    width: 70%; 
+    height: 250px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-top:15px;
+}
+.img9{
+    background-image: url(certificate/Zai.JPG);
+    width: 70%; 
+    height: 250px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-top:15px;
+}
+
+
 
 
 .msg { padding: 10px; background: #222; position: relative; }
