@@ -148,7 +148,7 @@
     margin-right: auto;
     margin-top:15px;
 }
-.img10{
+#img10{
     background-image: url(certificate/ITI.jpg);
     width: 70%; 
     height: 600px;
@@ -156,6 +156,13 @@
     margin-left: auto;
     background-size: 100% 100%;
     margin-right: auto;
+    display: none;
+    z-index: 2;
+    border-radius: 3%;
+    position: absolute;
+}
+#ITI{
+    text-decoration: underline;
 }
 
 
