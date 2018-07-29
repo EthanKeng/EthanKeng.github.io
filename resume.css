@@ -9,6 +9,36 @@
                         (matt brown)
 ---------------------------------------------------------------------------------
 */
+#hover-img
+{    
+    background-image: url(works/VacationPlanner.JPG); 
+    position:absolute;
+    width: 80%; 
+    height: 350px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    display: none;
+}
+#hover-img2
+{    
+    background-image: url(works/Todolist.JPG); 
+    position:absolute;
+    width: 80%; 
+    height: 350px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: auto;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    display: none;
+}
 
 .img1{
     background-image: url(certificate/HTML.jpg);
