@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            font-family: Verdana;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: darkblue;
+        }
+
+        .rating-circle {
+            height: 2em;
+            width: 2em;
+            border: .1em solid black;
+            border-radius: 1.1em;
+            display: inline-block;
+            margin: 0;
+            padding: .1em;
+        }
+
+        .rating-hover {
+            background-color: yellow;
+        }
+
+        .rating-chosen {
+            background-color: green;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+</head>
+
+<body>
+    <h1>Web Developer Conference</h1>
+    <h2>Finding elements using jQuery</h2>
+    <div>Identifying elements using jQuery methods and selectors.</div>
+    <h3>Rate Keng's IQ</h3>
+    <div id="rating-container">
+        <div class="rating-circle"></div>
+        <div class="rating-circle"></div>
+        <div class="rating-circle"></div>
+        <div class="rating-circle"></div>
+        <div class="rating-circle"></div>
+    </div>
+    <script>
+
+        $(function () {
+            var object_selected = -1;
+
+            $('.rating-circle').hover(function () {
+                var this_object = $(this);
+                $(".rating-circle").each(function (index, element) {
+                    $(element).removeClass("rating-hover rating-chosen");
+                });
+
+                this_object.prevAll().addClass('rating-hover');
+                this_object.addClass('rating-hover');
+            });
+
+            $('.rating-circle').click(function () {
+                var this_object = $(this);
+                object_selected = this_object.index();
+                $(".rating-circle").each(function (index, element) {
+                    $(element).removeClass("rating-hover rating-chosen");
+                });
+                this_object.prevAll().addClass('rating-chosen');
+                this_object.addClass('rating-chosen');
+            });
+
+            $('.rating-circle').mouseout(function () {
+                $(".rating-circle").each(function (index, element) {
+                    $(element).removeClass("rating-hover rating-chosen highlight");
+
+                    if (index <= object_selected) {
+                        $(element).addClass("rating-chosen");
+                    }
+                });
+            });
+        })
+
+    </script>
+</body>
+
+</html>
