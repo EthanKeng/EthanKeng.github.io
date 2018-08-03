@@ -38,3 +38,14 @@ function func6()
 {  
     document.getElementById("img10").setAttribute("style", "display:none;")
 }
+
+$('#ratingLight').mouseover(
+    function (){
+        $('#forjQuery').addClass('ratingLightImg');
+    }
+)
+$('#ratingLight').mouseleave(
+    function (){
+        $('#forjQuery').removeClass('ratingLightImg');
+    }
+)
