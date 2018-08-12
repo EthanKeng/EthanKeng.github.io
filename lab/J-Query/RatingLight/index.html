@@ -46,6 +46,32 @@
         <div class="rating-circle"></div>
         <div class="rating-circle"></div>
     </div>
+
+    <!-- sample HTML -->
+    </br>
+    <H1>jQuery Focus and Blur</H1>
+    <div>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" />
+        <span id="phone-help"></span>
+        <br>
+        <label for="email">E-mail</label>
+        <input type="text" id="email" />
+        <span id="email-help"></span>
+    </div>
+    <br>
+    <div>
+        <h1>CLICK and DBCLICK</h1>
+        <button type="button" id='buttonTest'>DBClick!</button>
+        <br><br>
+        <button type="button" id='buttonTest2'>Click <br>and you can know where you are! <br> I guess this is how they trace us. </button>
+        <p id='output'></p>
+
+
+    </div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
     <script>
@@ -58,24 +84,50 @@
         );
          */
         // My jQuery code
-            var index = -Infinity;
-            $('.rating-circle').mouseover(
-                function () {
-                    $(this).prevAll().addBack().addClass('rating-hover');
-                    $('#rating-container').children().removeClass('rating-chosen');
-                });
-            $('.rating-circle').mouseout(
-                function () {
-                    $(this).prevAll().addBack().removeClass('rating-hover');
-                    $($('#rating-container').children().get(index)).prevAll().addBack().addClass('rating-chosen');
-                });
-            $('.rating-circle').click(
-                function () {
-                    $(this).prevAll().addBack().addClass('rating-chosen');
-                    index = $('#rating-container').children().index($(this));
-                    $('#test').text('Your rating is '+(index+1))
-                });
-            
+        var index = -Infinity;
+        $('.rating-circle').mouseover(
+            function () {
+                $(this).prevAll().addBack().addClass('rating-hover');
+                $('#rating-container').children().removeClass('rating-chosen');
+            });
+        $('.rating-circle').mouseout(
+            function () {
+                $(this).prevAll().addBack().removeClass('rating-hover');
+                $($('#rating-container').children().get(index)).prevAll().addBack().addClass('rating-chosen');
+            });
+        $('.rating-circle').click(
+            function () {
+                $(this).prevAll().addBack().addClass('rating-chosen');
+                index = $('#rating-container').children().index($(this));
+                $('#test').text('Your rating is ' + (index + 1))
+            });
+
+        // sample JavaScript
+        $('#phone').focus(function () {
+            // Control has focus. Display help
+            $('#phone-help').text('Please enter your phone number as all digits');
+        }).blur(function () {
+            // Control lost focus. Clear help
+            $('#phone-help').text('');
+        });
+        $('#email').focus(function () {
+            // Control has focus. Display help
+            $('#email-help').text('Please enter your email ');
+        }).blur(function () {
+            // Control lost focus. Clear help
+            $('#email-help').text('');
+        });
+
+        //For Click Test
+        $('#buttonTest').dblclick(function () {
+            // this is linked to button that was clicked, but it is a DOM object
+            // convert it to a jQuery object by using the jQuery factory
+            $(this).text('Double Clicked!!');
+        });
+        //Click and show the position
+        $('#buttonTest2').click(function (e) {
+            $('#output').text(e.pageX + 'x' + e.pageY);
+        });
 
 
 
