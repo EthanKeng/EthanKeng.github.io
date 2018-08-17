@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            font-family: Verdana;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: darkblue;
+        }
+
+        .rating-circle {
+            height: 2em;
+            width: 2em;
+            border: .1em solid black;
+            border-radius: 1.1em;
+            display: inline-block;
+            margin: 0;
+            padding: .1em;
+        }
+
+        .rating-hover {
+            background-color: yellow;
+        }
+
+        .rating-chosen {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contoso Web Developer Conference</h1>
+    <h2>Finding elements using jQuery</h2>
+    <div>This session is about identifying elements using jQuery methods and selectors.</div>
+    <h3>Rate this session</h3>
+    <div id="rating-container" max-value="5"></div>
+
+    <div>
+        <label for="max-value">Enter max value:</label>
+        <input type="text" id="max-value" />
+        <button type="button" id="update-max-value">Update max value</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script>
+        // your answer would go here
+        $('.rating-circle').click(function () {
+            $('#rating-container').children('.clicked').removeClass('rating-chosen clicked');
+            $(this).addClass('rating-chosen clicked');
+            $(this).prevAll().addClass('rating-chosen clicked');
+        });
+
+        $('.rating-circle').mouseover(function () {
+            $(this).addClass('rating-hover');
+            $(this).prevAll().addClass('rating-hover');
+            $('#rating-container').children('.clicked').removeClass('rating-chosen');
+        });
+
+        $('.rating-circle').mouseout(function () {
+            $(this).removeClass('rating-hover');
+            $(this).prevAll().removeClass('rating-hover');
+            $('#rating-container').children('.clicked').addClass('rating-chosen');
+        });
+
+        $('#update-max-value').click(function () {
+            //$('#body').delegate('#rating-container','click mouseover mouseout', function(){
+            var newValue = $('#max-value').val();
+            console.log(newValue);
+
+            $('#rating-container').empty();
+            $('#rating-container').attr('max-value', newValue);
+
+            for (var i = 0; i < newValue; i++) {
+                $('#rating-container').append("<div class='rating-circle'></div>");
+            }
+
+            $('#rating-container').delegate('div', 'click', function () {
+                //Clicked Code
+                $('#rating-container').children('.clicked').removeClass('rating-chosen clicked');
+                $(this).addClass('rating-chosen clicked');
+                $(this).prevAll().addClass('rating-chosen clicked');
+                console.log('entered Clicked/delegate function')
+            });
+
+            $('#rating-container').delegate('div', 'mouseover', function () {
+                //mouseover code
+                $(this).addClass('rating-hover');
+                $(this).prevAll().addClass('rating-hover');
+                $('#rating-container').children('.clicked').removeClass('rating-chosen');
+                console.log('entered mouseover/delegate function')
+            });
+
+            $('#rating-container').delegate('div', 'mouseout', function () {
+                //mouseout code
+                $(this).removeClass('rating-hover');
+                $(this).prevAll().removeClass('rating-hover');
+                $('#rating-container').children('.clicked').addClass('rating-chosen');
+                console.log('entered mouseout/delegate function')
+            });
+        });    </script>
+</body>
+
+</html>

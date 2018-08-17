@@ -63,13 +63,36 @@
     <div>
         <h1>CLICK and DBCLICK</h1>
         <button type="button" id='buttonTest'>DBClick!</button>
-        <br><br>
-        <button type="button" id='buttonTest2'>Click <br>and you can know where you are! <br> I guess this is how they trace us. </button>
+        <br>
+        <br>
+        <button type="button" id='buttonTest2'>Click
+            <br>and you can know where you are!
+            <br> I guess this is how they trace us. </button>
         <p id='output'></p>
-
-
     </div>
-
+    <div>
+        <h1>Use jQuery to create Animations</h1>
+        <button type="button" id="btn-toggle">Toggle it ! </button>
+        <h4 id="targetToggle">Show or hide</h4>
+    </div>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <form>
+        <div>
+            <label>Name:</label>
+            <input type="text" />
+        </div>
+        <button type="button" id="show-additional-information">
+            Show additional information
+        </button>
+        <div id="additional-information" class="hidden">
+            <label>Additional information:</label>
+            <input type="text" />
+        </div>
+    </form>
 
 
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
@@ -128,9 +151,19 @@
         $('#buttonTest2').click(function (e) {
             $('#output').text(e.pageX + 'x' + e.pageY);
         });
-
-
-
+        //following animation 
+        $(function () {
+            $('#btn-toggle').click(function () {
+                // animation will take one second
+                $('#targetToggle').fadeToggle(1000);
+            });
+        });
+        // hide some unnessesary Info
+        $(function () {
+            $('#show-additional-information').click(function () {
+                $('#additional-information').show(750);
+            });
+        });
     </script>
 </body>
 
