@@ -45,6 +45,7 @@
         <input type="text" id="max-value" />
         <button type="button" id="update-max-value">Update max value</button>
     </div>
+    <h4 id='index'></h4>
 
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
@@ -66,7 +67,7 @@
             });
             $ratingContainer.delegate('.rating-circle', 'click', function () {
                 index = $('#rating-container').children().index($(this));
-                //$('#index').text(index);
+                $('#index').text(index);
                 $(this).addClass('rating-chosen').prevAll().addClass('rating-chosen');
             });
 
@@ -76,7 +77,7 @@
                     $ratingContainer.append($ratingCircle.clone());
                 }
                 index = -1;
-                //$('#index').text(index);
+                $('#index').text(index);
             }
 
             fillRating();

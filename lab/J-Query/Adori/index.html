@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='q1'>
+        <h2>Q1</h2>
+        <p>Do you know XXXX?</p>
+        <input class='Q1' type="checkbox" id="Q1Y" value="1" name='Y' />Yes
+        <br>
+        <input class='Q1' type="checkbox" id="Q1N" value="0" />No
+        <br>
+
+    </div>
+    <div id='q2' class="hidden">
+        <h2>Q2</h2>
+        <p>Do you know XXXX?</p>
+        <input class='Q2' type="checkbox" id="Q2Y" value="1" name='Y' />Yes
+        <br>
+        <input class='Q2' type="checkbox" id="Q2N" value="0" />No
+        <br>
+    </div>
+    <div id='q3' class="hidden">
+        <h2>Q3</h2>
+        <p>Do you know XXXX?</p>
+        <input class='Q3' type="checkbox" id="Q3Y" value="1" name='Y'/>Yes
+        <br>
+        <input class='Q3' type="checkbox" id="Q3N" value="0" />No
+        <br>
+
+    </div>
+
+
+    <h1></h1>
+<!-- 
+    <div id="level" style="display:none">
+        <h1> Your level is
+            <span> XXX</span>
+        </h1>
+    </div>
+ -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $('.Q1').click(function () {
+                $('#q2').show(750);
+                $('#q1').toggle(0);
+            });
+        });
+        $('.Q2').click(function () {
+            $("#q3").toggle(750);
+            $("#q2").toggle(0);
+
+        });
+        $('.Q3').click(function () {
+            $("#level").toggle(750);
+            $("#q3").toggle(0);
+            //         $scores = parseInt($("#Q1Y:checked").val()) + parseInt($("#Q2Y:checked").val()) + parseInt($("#Q3Y:checked").val());
+            //         $('h3').text($scores);
+            $atLeastOneIsChecked = $('input[name="Y"]:checked').length
+            $('h1').text($atLeastOneIsChecked);
+
+            if ($atLeastOneIsChecked == 3) {
+                $('h1').text('Your level is '+ $atLeastOneIsChecked);
+            }
+            else if ($atLeastOneIsChecked == 2) {
+                $('h1').text('Your level is '+ $atLeastOneIsChecked);
+            }
+            else if ($atLeastOneIsChecked < 2) {
+                $('h1').text('Your level is '+ $atLeastOneIsChecked);
+            }
+
+
+
+        });
+
+
+ //       $(function () {
+ //           $test = parseInt( $("input:checked").val());
+ //           if ($test > 0) {
+ //               $('h3').text($test);   
+ //           }
+ //       });
+
+
+
+    </script>
+
+</body>
+
+
+</html>
