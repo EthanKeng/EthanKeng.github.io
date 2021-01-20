@@ -1,0 +1,182 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<div style="" ><h3 class="sec-title .feature-area sp-heading pc-heading ">商品一覧</h3></div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+   </ol>
+   <div class="carousel-inner ToCenter">
+      <div class="carousel-item py-5 active">
+         <div class="row">
+            <div class="col-6 ">
+               <a href="https://nananworld.jp/products/detail/15"> <img src="/html/user_data/assets/img/common/product/price/mask@1-1.png"" alt=""> </a>
+            </div>
+            <div class=" col-6 " >
+               <a href="https://nananworld.jp/products/detail/4"> <img src="/html/user_data/assets/img/common/product/price/mask@2-2.png"" alt=""> </a>
+            </div>
+         </div>
+      </div>
+      <div class=" carousel-item py-5">
+         <div class="row">
+            <div class="col-6 ">
+               <a href="https://nananworld.jp/products/detail/3"> <img src="/html/user_data/assets/img/common/product/price/mask@3-3.png"" alt=""> </a>
+            </div>
+            <div class=" col-6 ">
+               <a href="https://nananworld.jp/products/detail/2"> <img src="/html/user_data/assets/img/common/product/price/mask@4-4.png"" alt=""> </a>
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class=" carousel-item py-5">
+         <div class="row">
+            <div class="col-6 ">
+               <a href="https://nananworld.jp/products/detail/1"> <img src="/html/user_data/assets/img/common/product/price/mask@5-5.png"" alt=""> </a>
+            </div>
+            <div class=" col-6 ">
+               <a href="https://nananworld.jp/products/detail/5"> <img src="/html/user_data/assets/img/common/product/price/mask@6-6.png"" alt=""> </a>
+            </div>
+         </div>
+      </div>
+      <div class=" carousel-item py-5">
+         <div class="row">
+            <div class="col-6 ">
+               <a href="https://nananworld.jp/products/list?category_id=12"> <img src="/html/user_data/assets/img/common/product/price/mask@7-7.png"" alt=""> </a>
+            </div>
+            <div class=" col-6 ">
+               <a href="https://nananworld.jp/products/detail/15"> <img src="/html/user_data/assets/img/common/product/price/mask@8-8.png"" alt=""> </a>
+            </div>
+         </div>
+      </div>
+      <!-- <div class=" carousel-item py-5">
+         <div class="row">
+             <div class="col-sm-6">slide 5</div>
+             <div class="col-sm-6">slide 6</div>
+         </div>
+         </div>
+         <div class="carousel-item py-5">
+         <div class="row">
+         <div class="col-sm-6">slide 7</div>
+         <div class="col-sm-6">slide 8</div>
+         </div>
+         </div>
+         </div> -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+   </div>
+</div>
+<style>
+ @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  div .ToCenter .row{
+    width: 95%;
+  }
+  div .sp-heading{
+      width: 98%;  
+      padding: 0px;
+  }
+}
+   .pc-heading{
+       margin: auto; 
+       width: 75%;  
+       padding: 10px;
+   }    
+   .ToCenter .row {
+   margin: auto;
+   width: 800px;
+   }
+   p {
+   font-size: 2rem;
+   }
+   border: none;
+   padding: 5px;
+   }
+
+   p {
+   font-size: 2rem;
+   }
+   border: none;
+   padding: 5px;
+   }
+   .ToCenter .row .col-sm-6 {
+   margin: auto;
+   width: 50%;
+   border: none;
+   padding: 5px;
+   text-align: center;
+   }
+   .ToCenter .row .col-sm-6 p {
+   font-size: 0rem;
+   }
+   .ToCenter .row .col-sm-6 img{
+  border-radius: 4px;
+  padding: 5px;
+  width: 650px;
+}
+ 
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon {
+   height: 100px;
+   width: 100px;
+   outline: black;
+   background-size: 100%, 100%;
+   border-radius: 50%;
+   border: none;
+   background-image: none;
+   }
+   .carousel-control-next-icon:after {
+   content: '>';
+   font-size: 45px;
+   color: gray;
+   }
+   .carousel-control-prev-icon:after {
+   content: '<';
+   font-size: 45px;
+   color: grey;
+   }
+   img {
+   max-width: 100%;
+   max-height: 100%;
+   }
+   .carousel-indicators li {
+   width: 10px !important;
+   height: 10px !important;
+   margin-right: 5px !important;
+   margin-left: 5px !important;
+   border-radius: 50% !important;
+   border: 0 !important;
+   background-color: transparent !important;
+   box-shadow: 0 0 0 .1rem rgba(0, 0, 0, 1);
+   }
+   .carousel-indicators{
+       padding-left: 10%;
+   }
+   /*   ol.carousel-indicators li,*/
+   /*   ol.carousel-indicators li.active {*/
+   /*  float: left;*/
+   /*  width: 33%;*/
+   /*  height: 10px;*/
+   /*  margin: 0;*/
+   /*  border-radius: 50%;*/
+   /*  border: 0;*/
+   /*  background: transparent;*/
+   /*}*/
+   /*ol.carousel-indicators li.active {*/
+   /*  background: blue;*/
+   }
+</style>
+<script>
+   $('#myCarousel').carousel({
+       interval: 2000
+   })
+</script>
